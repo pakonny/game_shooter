@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="home" style="display: flex;">
+        <div id="welcome">
+        <img src="assets/Sprites/shooter.png" alt="" srcset="">
+
+        <div class="input">
+            <input type="text" id="username" placeholder="Input Username">
+            <select name="" id="level">
+                <option value="30" selected>Easy</option>
+                <option value="20">Medium</option>
+                <option value="15">Hard</option>
+            </select>
+        </div>
+
+        <div class="tembak">
+            <div class="opt">
+                <img src="assets/Sprites/gun1.png" alt="" srcset="">
+                <input type="radio" name="tembak" value="gun1" checked >
+            </div>
+            <div class="opt">
+                <img src="assets/Sprites/gun2.png" alt="" srcset="">
+                <input type="radio" name="tembak" value="gun2" >
+            </div>
+        </div>
+
+        <div class="target">
+            <div class="opt">
+                <img src="assets/Sprites/target1.png" alt="" srcset="">
+                <input type="radio" name="target" value="target1" checked>
+            </div>
+            <div class="opt">
+                <img src="assets/Sprites/target2.png" alt="" srcset="">
+                <input type="radio" name="target" value="target2">
+            </div>
+            <div class="opt">
+                <img src="assets/Sprites/target3.png" alt="" srcset="">
+                <input type="radio" name="target" value="target3">
+            </div>
+        </div>
+        <div class="btn">
+            <button id="play" disabled>Play Game</button>
+            <button id="inst">Instruction</button>
+        </div>
+        
+    </div>
+
+        <div id="ins">
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <h2>How To Play Game</h2>
+                <span style="font-size: 40px;" id="close">❎</span>
+            </div>
+            <ol>
+                <li>Input Username</li>
+                <br>
+                <li>Point the pointer at the target</li>
+                <br>
+                <li>Click to shoot</li>
+                <br>
+                <li>Get as many point as possible</li>
+                <br>    
+                <li>Enjoy!</li>
+            </ol>
+        </div>
+    </div>
+    <canvas id="canvas" width="1000" height="600" style="display: none;"></canvas>
+
+    <div id="leaderboard" style="display: none;">
+        <h2>LEADERBOARD</h1>
+        <select name="sort" id="sort">
+            <option value="sbs">Sort By Score</option>
+        </select>
+        <article>
+            <div class="history">
+                <div>
+                    <span>Thomas Galih</span>
+                    <p style="font-style: italic;">Score : 44</p>
+                </div>
+                <button id="detail">Detail</button>
+            </div>
+            <hr>
+        </article>
+        <article>
+            <div class="history">
+                <div>
+                    <span>Thomas Galih</span>
+                    <p style="font-style: italic;">Score : 44</p>
+                </div>
+                <button id="detail">Detail</button>
+            </div>
+            <hr>
+        </article>
+        <article>
+            <div class="history">
+                <div>
+                    <span>Thomas Galih</span>
+                    <p style="font-style: italic;">Score : 44</p>
+                </div>
+                <button id="detail">Detail</button>
+            </div>
+            <hr>
+        </article>
+    </div>
+
+    <div id="detailBar" style="display: none;">
+        <h3 id="name">Rafi Ahmad</h3>
+        <h3>Score : <span id="score">30</span></h3>
+        <h3>Time : <span id="time">00:22</span></h3>
+    </div>
+
+
+    <div style="display: none;" id="pause">
+        <div class="bar">
+            <h3>Game Pause</h3>
+        </div>
+        <hr>
+        <main>
+            <h2>Player Name : <span id="namePause">Yourname</span></h2>
+            <div>
+                <button id="continue">Continue</button>
+                <!-- <button id="restart">Restart</button> -->
+            </div>
+        </main>
+    </div>
+
+    <div style="display: none;" id="gameOver" >
+        <div class="bar">
+            <h3 >Game Over</h3>
+        </div>
+        <hr>
+        <main>
+            <div style="font-size: 25px; margin: 3px; font-weight: 600;">Player Name : <span id="nameOver">Yourname</span></div>
+            <div style="font-size: 25px;  font-weight: 600; margin-bottom: 25px;">Score : <span id="scorePemain">0</span></div>
+            <div>
+                <button id="restart">Restart</button>
+                <button id="exit">Exit</button>
+            </div>
+        </main>
+    </div>
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>

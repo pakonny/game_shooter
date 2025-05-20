@@ -1,0 +1,216 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#home {
+   
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#welcome {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+img {
+    width: 150px;
+}
+
+.opt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tembak {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.target {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    width: 250px;
+    gap: 10px;
+}
+
+.tembak img, .target img {
+    width: 100px;
+}
+
+input, select {
+   background-color: rgba(128, 128, 128, 0.315);
+   border: 3px solid gray;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+input::placeholder {
+    color: black;
+}
+
+#play {
+    border: 0;
+    background-color: rgb(10, 172, 10);
+    color: white;
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#inst {
+    border: 0;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}
+
+#ins {
+    
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    font-size: 20px;
+    padding: 20px 30px;
+    font-family: sans-serif;
+    display: none;
+}
+
+span {
+    cursor: pointer;
+}
+
+#leaderboard {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif ;
+    width: 250px;
+    height: 600px;
+    color: white;
+    background-color: black ;
+}
+
+#sort {
+    width: 100%;
+    background-color: white;
+    border: 0;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.history {
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#detail {
+    border: 0;
+    background-color: yellow;
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(138, 43, 43);
+    padding: 10px;
+}
+
+#detailBar {
+    position: absolute;
+    width: 1000px;
+    height: 50px;
+    left: 328px;
+    top: 181px;
+    color: white;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+
+canvas {
+    cursor: none;
+}
+
+#pause, #gameOver {
+    box-sizing: border-box;
+    background-color: rgb(10, 172, 10);
+    color: white;
+    font-family: sans-serif;
+    width: 400px;
+    height: 280px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    box-shadow: 0px -1px 58px 17px rgba(30,212,51,0.68);
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar h3 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.bar span {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+main {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main button {
+    border: 0;
+    padding: 10px 40px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
